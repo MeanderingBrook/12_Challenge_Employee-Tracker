@@ -1,0 +1,19 @@
+{
+  "name": "12_challenge_employee-tracker",
+  "version": "1.0.0",
+  "description": "Node.js CLI application enabling management of company employee database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeanderingBrook/12_Challenge_Employee-Tracker.git"
+  },
+  "author": "Christopher Milazzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeanderingBrook/12_Challenge_Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/MeanderingBrook/12_Challenge_Employee-Tracker#readme"
+}
