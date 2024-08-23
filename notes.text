@@ -1,0 +1,11 @@
+npm install pg
+npm install dotenv
+
+psql -U postgres
+\i sampleSeed.sql
+\i ./src/db/schema.sql
+
+// Determine Postgres Port (Default: 5432)
+SELECT *
+FROM pg_settings
+WHERE name = 'port';

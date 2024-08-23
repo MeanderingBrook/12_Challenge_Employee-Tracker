@@ -4,7 +4,8 @@
   "description": "Node.js CLI application enabling management of company employee database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,9 @@
   },
   "homepage": "https://github.com/MeanderingBrook/12_Challenge_Employee-Tracker#readme",
   "dependencies": {
-    "inquirer": "^10.1.8",
+    "dotenv": "^16.4.5",
+    "inquirer": "^8.2.4",
+    "nodemon": "^3.1.4",
     "pg": "^8.12.0"
   }
 }
