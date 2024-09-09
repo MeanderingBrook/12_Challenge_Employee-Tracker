@@ -17,6 +17,7 @@ const {
   selectDeptTable,
   selectRoleTable,
   newEmp,
+  newRole,
 } = require("./db/query.js");
 
 // Application User Interface (UI) Selection Options
@@ -40,6 +41,7 @@ function mainMenu() {
   ]);
 }
 
+// Executes dependent Functions based upon User's Main Menu selections
 async function userInput() {
   const userInput = await mainMenu();
 
@@ -60,8 +62,8 @@ async function userInput() {
       viewRoleTable();
       break;
     case "Add New Role":
-      console.log("Add New Role");
-      addRole();
+      // console.log("Add New Role");
+      await addRole();
       break;
     case "View All Departments":
       // console.log("View All Departments");
@@ -77,37 +79,46 @@ async function userInput() {
   }
 }
 
-// Functional initializes App
+// Functions executed only once to initialize App
 async function init() {
-  // dbCreate();
-  // dbConnect();
-  // await createDeptTable();
-  // await createRoleTable();
-  // await createEmpTable();
-  // await seedDeptTable();
-  // await seedRoleTable();
-  // await seedEmpTable();
+  // await dbCreate();
+  // await dbConnect();
+  await createDeptTable();
+  await createRoleTable();
+  await createEmpTable();
+  await seedDeptTable();
+  await seedRoleTable();
+  await seedEmpTable();
+}
 
+async function exe() {
+  userInput();
+}
+
+async function cont() {
   userInput();
 }
 
 async function viewEmpTable() {
   let data = await selectEmpTable();
   // console.log(data).then(() => mainMenu());
-  // console.log(data);
   console.table(data);
   userInput();
 }
 
 async function addEmp() {
-  let data = await newEmp(employee);
-  console.log(data);
+  // let res = await newEmp();
+  await newEmp();
+  // console.log(res);
+  // let data = await newEmp(employee);
+  // console.table(data);
   userInput();
 }
 
 async function addRole() {
-  let data = await newRole(role);
-  console.log(data);
+  // let data = await newRole();
+  // console.table(data);
+  await newRole();
   userInput();
 }
 
@@ -129,5 +140,8 @@ function quitApp() {
   process.exit();
 }
 
-// Function call to initialize app
-init();
+// Function call to initialize app, only executed once (e.g., Create Tables, Seed Tables)
+// init();
+
+// Function call to execute app for User
+exe();

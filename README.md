@@ -20,40 +20,40 @@
 
 ## Description
 
-The README Generator is a Node.js Command-Line Interface (CLI) based application that enables Users to quickly and professionally create Project README files, in Markdown (.md) format by answering a simple string of questions regarding the User's Project.  
+The Employee Tracker is a Node.js Command-Line Interface (CLI) based application that enables Users to view and manage Employee information through a simple cursor-based Menu and manual data entry.  
 
-The README Generator programatically creates README files with content determined by User responses to questions associated with the individual sections of a model README, and enhances the generated Markdown file with similarly programattically-generated colored badges, and URL references.
+The Employee Tracker programatically createds, updates, and generates views of Employee data.
 
-The README Generator ensures consistency of generated output, through programmatically-standardized specifications defined by the User questionnaire, and makes available the output Markdown file in a defined (predictable) location and file format that enables automated ingestion to, or use through and end-point application.
+The Employee Tracker ensures consistency of maintained Employee data through programmatically-standardized specifications defined by the application, and makes available the Employee data through query-generated views.
 
-As developed, the README Generator is only accessible through a local instance, specific to each accessing computer.
+As developed, the Employee Tracker Generator is only accessible through a local instance, specific to each accessing computer.
 
-Artifacts (README Markdown files) generated through local instances of the README Generator will be available to all Users of the install computer, held in on-device storage and, consequently, not currently accessible through the Web unless deployed as a component of an online application or other end-point.
+Data generated through local instances of the README Generator will be available to all Users of the install computer, held in on-device storage and, consequently, not currently accessible through the Web unless deployed as a component of an online application or other end-point.
 
-The README Generator source code is published on GitHub, and may be cloned to individual User computers to instantiate local versions.
+The Employee Tracker source code is published on GitHub, and may be cloned to individual User computers to instantiate local versions.
 
-The app utilizes a Node.js CLI-based (Inquirer Module) Form to ingest User requirements input, and JavaScript (mediated by Node) to generate local Markdown file output. 
+The app utilizes a Node.js CLI-based (Inquirer Module) Form to ingest User requirements input, and a Postgres database to store and maintain application data. 
 
-Because the README Generator output files are held in on-device storage, generated artifacts, though not Inquirer-mediated questionnaire responses themselves, will persist across User sessions on individual, hosting computers.
+Because the Employee Tracker output files are held in on-device storage, data and generated view will persist across User sessions on individual, hosting computers.
 
 
 ## Installation
 
-The README Generator source code may be downloaded from its GitHub repository, and run directly by a hosting computer.
+The Employee Tracker source code may be downloaded from its GitHub repository, and run directly by a hosting computer.
 
-No Installation of the SVG Logo Generator itself is required.
-
-However, local computers must hold an installation of Node.js in order the run the README Generator application.
+Installation of Node.js, Inquirer module and Postgres is required for the Employee Tracker application to run locally.
 
 
 ## Usage
 
-The README Generator is intended for use by one or more Users to generate README files, in Markdown format, specific to User-selected requirements (i.e., README content) identified through a CLI-based questionaire, and maintain the locally-generated Markdown file artifacts which persist across multiple sessions. 
+The Employee Tracker is intended for use by one or more Users to view and maintain Employee data, as defined by the application parameters, and maintain the locally-generated data which persists across multiple sessions. 
 
-All Users of the README Generator on a local computer will have full access to all generated artifacts.
+All Users of the Employee Tracker on a local computer will have full access to all generated views and data.
 
 
 ## Credits and Code Source
+
+Tutors provided key insights and guidance in developing application queries, and application architecture.
 
 Code, where referenced from a third-party Source, is noted in Comments accompanying the relevant Code lines.
 
@@ -103,14 +103,14 @@ N / A
 
 ## Tests
 
-Specification output testing and data evaluation, see index-test.js, and log.txt ('archive' Folder)
+Specification output testing and data evaluation, see index-test.js, and query.js, and archive.js ('archive' Folder).
 
-`console.log` output of specification data specific to User requirements; see index.js and generateMarkdown.js ('utils' Folder).
+`console.log` output of specification data specific to User requirements; see index.js and query.js ('db' Folder).
 
 
 ## GitHub Repository Location (HTTPS)
 
-https://github.com/MeanderingBrook/09_Challenge_README-Generator.git
+https://github.com/MeanderingBrook/12_Challenge_Employee-Tracker.git
 
 
 ## GitHub Pages Location
@@ -120,8 +120,8 @@ Not Applicable: Application is a Node.js Command Line Interface (CLI)-based appl
 
 ## Application Screenshots
 
-![README Generator: CLI Questionnaire - Screenshot 01](./assets/images/README-Generator_CLI-Questionnaire_Screenshot-01.png?raw=true "README Generator: CLI Questionnaire")
+![Employee Tracker: CLI Data Manager - Main Menu - Screenshot 01](./assets/images/Employee-Tracker_CLI-Data-Manager_Screenshot-01.png?raw=true "Employee Tracker: CLI Data Manager - Main Menu")
 
-![README Generator: CLI Questionnaire with Validation Warning - Screenshot 02](./assets/images/README-Generator_CLI-Questionnaire-Validation-Warning_Screenshot-02.png?raw=true "README Generator: CLI Questionnaire with Validation Warning")
+![Employee Tracker: CLI Data Manager - View All Employees - Screenshot 02](./assets/images/Employee-Tracker_CLI-Data-Manager_Screenshot-02.png?raw=true "Employee Tracker: CLI Data Manager - View All Employees")
 
-![README Generator: CLI Questionnaire with Process Completion Notice - Screenshot 03](./assets/images/README-Generator_CLI-Questionnaire-Process-Completion-Notice_Screenshot%2003.png?raw=true "README Generator: CLI Questionnaire with Process Completion Notice")
+![Employee Tracker: CLI Data Manager - Add New Role - Screenshot 03](./assets/images/Employee-Tracker_CLI-Data-Manager_Screenshot-03.png?raw=true "Employee Tracker: CLI Data Manager - View All Departments")
